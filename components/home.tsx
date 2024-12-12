@@ -56,7 +56,7 @@ export function Home() {
     { name: 'Zaufali nam', to: 'partners' },
     { name: 'Kontakt', to: 'contact' },
   ]
-
+  const [isDialogOpen, setIsDialogOpen] = useState(true)
   const services = [
     { name: 'Dokumentacja Projektowa Obiektów', icon: BookText,description:'Uzgadnianie dokumentacji projektowej obiektów pod względem ochrony przeciwpożarowej.' },
     { name: 'Instalacja Przeciwpożarowa', icon: BookCheck,description:'Uzgadnianie dokumentacji projektowej instalacji przeciwpożarowych.' },
@@ -65,6 +65,25 @@ export function Home() {
 
   return (
     <div className="min-h-screen bg-white">
+                  <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-[425px]">
+          <div className="p-4">
+            <h2 className="text-lg font-semibold mb-2">INFORMATION ABOUT TRADEMARKS</h2>
+            <p className="text-sm text-gray-600">
+            All logos displayed on this site are the property of their respective owners. They are used solely for demonstrative and representational purposes. Their presence does not imply any partnership, endorsement, or approval of the project by these entities.
+                      </p>
+            <p className="text-sm text-gray-600 mt-2">
+            If you have any questions or concerns regarding the use of these logos, please <a className='text-red-800' href='https://akuma-dev.vercel.app'>contact me.</a>
+            </p>
+            <button
+              className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition duration-300"
+              onClick={() => setIsDialogOpen(false)}
+            >
+              Zamknij
+            </button>
+          </div>
+        </DialogContent>
+      </Dialog>
       {/* Nawigacja */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
