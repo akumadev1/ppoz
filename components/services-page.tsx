@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Link as ScrollLink, Element } from 'react-scroll'
+import { Link as ScrollLink} from 'react-scroll'
 import { motion } from 'framer-motion'
-import { Shield, Phone, Mail, MapPin, Facebook,Menu, X, BookText, BookCheck, FireExtinguisher,BadgeCheck } from 'lucide-react'
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
+import { Facebook,Menu, X,BadgeCheck } from 'lucide-react'
+import { Dialog, DialogContent} from "@/components/ui/dialog"
 
 export function ServicesPageComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
