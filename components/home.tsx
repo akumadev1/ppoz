@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Link as ScrollLink, Element } from 'react-scroll'
 import { motion } from 'framer-motion'
-import { Shield, Phone, Mail, MapPin, Facebook,Menu, X, BookText, BookCheck, FireExtinguisher } from 'lucide-react'
+import { Phone, Mail, MapPin, Facebook,Menu, X, BookText, BookCheck, FireExtinguisher } from 'lucide-react'
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 
 export function Home() {
